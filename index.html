@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>揭涛英 - 梦开始的地方</title>
+    <meta name="description" content="揭涛英的个人主页，记录技术与梦想的起点">
+    <meta name="author" content="揭涛英">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"> <!-- 图标库 -->
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        body {
+            line-height: 1.6;
+            color: #333;
+            background-color: #f9f9f9;
+        }
+
+        /* 导航栏 */
+        .navbar {
+            position: fixed;
+            top: 0;
+            width: 100%;
+            background: #2c3e50;
+            padding: 1rem 2rem;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+            z-index: 1000;
+        }
+
+        .nav-links {
+            display: flex;
+            justify-content: flex-end;
+            list-style: none;
+        }
+
+        .nav-links a {
+            color: white;
+            text-decoration: none;
+            margin-left: 2rem;
+            font-weight: 500;
+            transition: color 0.3s;
+        }
+
+        .nav-links a:hover {
+            color: #3498db;
+        }
+
+        /* 英雄区域 */
+        .hero {
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url('你的背景图片链接.jpg') center/cover; /* 建议替换为海边/晨光背景图 */
+            color: white;
+            padding: 0 1rem;
+        }
+
+        .hero-content h1 {
+            font-size: 3.5rem;
+            margin-bottom: 0.5rem;
+        }
+
+        .hero-content p {
+            font-size: 1.5rem;
+            margin-bottom: 2rem;
+        }
+
+        /* 内容区域 */
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 4rem 2rem;
+        }
+
+        .section {
+            margin-bottom: 4rem;
+        }
+
+        .section-title {
+            text-align: center;
+            font-size: 2.5rem;
+            margin-bottom: 2rem;
+            color: #2c3e50;
+        }
+
+        .cards {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+        }
+
+        .card {
+            background: white;
+            padding: 2rem;
+            border-radius: 8px;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+            transition: transform 0.3s;
+        }
+
+        .card:hover {
+            transform: scale(1.02);
+        }
+
+        /* 页脚 */
+        .footer {
+            background: #2c3e50;
+            color: white;
+            text-align: center;
+            padding: 2rem;
+            position: relative;
+        }
+
+        .footer-links {
+            margin-bottom: 1rem;
+        }
+
+        .footer-links a {
+            color: white;
+            text-decoration: none;
+            margin: 0 1rem;
+            font-size: 1.2rem;
+        }
+
+        .footer-links a:hover {
+            color: #3498db;
+        }
+
+        /* 响应式设计 */
+        @media (max-width: 768px) {
+            .navbar {
+                padding: 1rem;
+                justify-content: center;
+            }
+
+            .nav-links {
+                justify-content: center;
+            }
+
+            .hero-content h1 {
+                font-size: 2.5rem;
+            }
+
+            .hero-content p {
+                font-size: 1.2rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- 导航栏 -->
+    <nav class="navbar">
+        <ul class="nav-links">
+            <li><a href="#home">首页</a></li>
+            <li><a href="#about">关于</a></li>
+            <li><a href="#projects">项目</a></li>
+            <li><a href="#contact">联系</a></li>
+        </ul>
+    </nav>
+
+    <!-- 英雄区域（含定制诗歌） -->
+    <section class="hero" id="home">
+        <div class="hero-content">
+            <h1>揭涛英</h1>
+            <p>在涛声里埋下第一颗星子<br>
+               是你名字初绽的平仄<br>
+               沙滩拓印着未干的足迹<br>
+               每粒细沙都藏着海的平仄<br>
+               <br>
+               晨光剪开雾霭的刹那<br>
+               浪尖托起白鸥的翅膀<br>
+               你以潮声为笔，海风为笺<br>
+               在时光的扉页写下：出发<br>
+               <br>
+               梦开始的地方从不是远方<br>
+               是睫毛上未凝的露珠<br>
+               是掌心紧握的贝壳私语<br>
+               是每个「开始」都值得沸腾的勇气</p>
+            <a href="#projects" class="btn">查看项目</a>
+        </div>
+    </section>
+
+    <!-- 内容区域 -->
+    <div class="container">
+        <!-- 关于部分 -->
+        <section class="section" id="about">
+            <h2 class="section-title">关于</h2>
+            <p>这里可补充个人简介或技术理念，与首页诗歌形成呼应，例如：「始终相信代码是理性的诗，每个项目都是一次向世界提问的旅程。」</p>
+        </section>
+
+        <!-- 项目部分 -->
+        <section class="section" id="projects">
+            <h2 class="section-title">最新项目</h2>
+            <div class="cards">
+                <!-- 项目卡片示例，需替换为实际项目 -->
+                <div class="card">
+                    <h3>项目名称</h3>
+                    <p>项目描述：这里可以简要介绍项目的功能、技术栈或亮点，例如：「基于Vue3开发的响应式博客系统，实现动态数据可视化与用户交互优化。」</p>
+                    <a href="https://github.com/你的用户名/项目仓库" class="btn" target="_blank">查看仓库</a>
+                </div>
+                <div class="card">
+                    <h3>项目名称</h3>
+                    <p>项目描述：这里可以简要介绍项目的功能、技术栈或亮点，例如：「使用Node.js构建的全栈电商平台，集成支付系统与智能推荐算法。」</p>
+                    <a href="https://github.com/你的用户名/项目仓库" class="btn" target="_blank">查看仓库</a>
+                </div>
+            </div>
+        </section>
+
+        <!-- 联系部分 -->
+        <section class="section" id="contact">
+            <h2 class="section-title">联系与合作</h2>
+            <div class="footer-links">
+                <a href="https://github.com/你的用户名" target="_blank"><i class="fab fa-github"></i> GitHub</a>
+                <a href="mailto:你的邮箱@example.com"><i class="fas fa-envelope"></i> 邮箱：你的邮箱@example.com</a>
+                <a href="https://linkedin.com/in/你的用户名" target="_blank"><i class="fab fa-linkedin"></i> LinkedIn</a>
+            </div>
+        </section>
+    </div>
+
+    <!-- 页脚 -->
+    <footer class="footer">
+        <p>&copy; 2025 揭涛英. 版权所有 | 用代码书写梦想的起点</p>
+    </footer>
+</body>
+</html>
